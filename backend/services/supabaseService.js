@@ -15,7 +15,7 @@ export const saveMovie = async (movie) => {
 };
 
 
-export const searchSimillarMovies = async (embedding, threshold = 0.75, count = 3) => {
+export const searchSimillarMovies = async (embedding, threshold = 0.75, count = 10) => {
     const { data, error } = await supabase
         .rpc('match_movies', {
             query_embedding: embedding,

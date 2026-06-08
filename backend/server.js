@@ -1,9 +1,7 @@
+import './config/env.js';
 import express from 'express';
 import cors from 'cors';
-import dotenv from 'dotenv';
 import recommendRoute from './routes/recommend.js';
-
-dotenv.config();
 
 const app = express();
 
