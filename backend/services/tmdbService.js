@@ -17,7 +17,7 @@ export const fetchMovies = async (page = 1) => {
 };
 
 export const fetchMovieKeyWords = async (movieId) => {
-    const response = await fetch(`${TMDB_BASE_URL}/movie/{${movieId}/keywords`,
+    const response = await fetch(`${TMDB_BASE_URL}/movie/${movieId}/keywords`,
         { headers }
     );
     const data = await response.json();
@@ -25,7 +25,7 @@ export const fetchMovieKeyWords = async (movieId) => {
 };
 
 export const fetchMoive = async (movieId) => {
-    const response = await fetch(`${TMDB_BASE_URL}/movie/{${movieId}`,
+    const response = await fetch(`${TMDB_BASE_URL}/movie/${movieId}`,
         { headers }
     );
     const data = await response.json();
