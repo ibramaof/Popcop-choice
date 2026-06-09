@@ -35,7 +35,7 @@ router.post('/recommend', async (req, res) => {
             recommendation,
             movies: similarMovies.slice(0, 3)
         });
-    } catch (e) {
+    } catch (error) {
         console.error('Recommendation error:', error.message);
         res.status(500).json({
             success: false,
